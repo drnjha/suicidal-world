@@ -1,5 +1,5 @@
 ##########################################################
-# installing-and-loading-missing-libs
+# installing and loading missing libs
 ##########################################################
 if(!require(data.table)) install.packages("data.table", repos = "http://cran.us.r-project.org")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://cran.us.r-project.org")
@@ -24,6 +24,12 @@ if(!require(hopkins)) install.packages("hopkins", repos = "http://cran.us.r-proj
 if(!require(clValid)) install.packages("clValid", repos = "http://cran.us.r-project.org")
 if(!require(ggpubr)) install.packages("ggpubr", repos = "http://cran.us.r-project.org")
 if(!require(compiler)) install.packages("compiler", repos = "http://cran.us.r-project.org")
+
+###############################################################
+# for simplicity's sake: loading the necessary data from github
+###############################################################
+download.file("https://github.com/drnjha/suicidal-world/raw/main/suicide-data-analysis.zip", "./suicide-data-analysis.zip")
+unzip("./suicide-data-analysis.zip")
 
 ##########################################################
 # loading libraries
