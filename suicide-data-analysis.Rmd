@@ -114,7 +114,9 @@ if(!require(compiler)) install.packages("compiler", repos = "http://cran.us.r-pr
 ###############################################################
 # for simplicity's sake: loading the necessary data from github
 ###############################################################
+if (!file.exists("./suicide-data-analysis.zip")) {
 download.file("https://github.com/drnjha/suicidal-world/raw/main/suicide-data-analysis.zip", "./suicide-data-analysis.zip")
+}
 unzip("./suicide-data-analysis.zip")
 ```
 
