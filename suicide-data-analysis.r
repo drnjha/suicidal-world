@@ -1797,3 +1797,9 @@ kable(out) %>% kable_styling(latex_options = "HOLD_position",bootstrap_options =
 out<- tables[[3]]
 kable(out) %>% kable_styling(latex_options = "HOLD_position",bootstrap_options = "condensed", full_width = F, font_size = 7, position = "left") %>% column_spec(1, width = "3.5cm") %>% column_spec(2, width = "12cm")
 
+###########################################
+# clean up directory
+###########################################
+if (file.exists("./suicide-data-analysis.zip")) {
+  unlink(as.character(unzip("./suicide-data-analysis.zip", list=T)$Name))
+}
